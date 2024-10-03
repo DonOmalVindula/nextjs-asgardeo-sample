@@ -1,12 +1,10 @@
 import { auth, signIn } from "@/auth"
 import { SignOutButton } from "@/components/sign-out-button";
-import { SessionProvider } from "next-auth/react";
 
 export default async function Home() {
   const session = await auth();
 
   return (
-    <SessionProvider>
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
           <div className="flex gap-4 items-center flex-col">
@@ -37,6 +35,5 @@ export default async function Home() {
           </div>
         </main>
       </div>
-    </SessionProvider>
   );
 }
