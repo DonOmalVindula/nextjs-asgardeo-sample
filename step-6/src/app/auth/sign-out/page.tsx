@@ -8,9 +8,12 @@ export default function Logout() {
   const router = useRouter();
 
   useEffect(() => {
-    signOut({ redirect: false }).then(() => {
+    async function main() {
+      await signOut({ redirect: false });
       router.push("/");
-    });
+    }
+    const timeout = setTimeout(() => main(), 500);
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
