@@ -14,7 +14,7 @@ export default function Logout() {
   }, []);
 
   return (
-    <div className="h-screen w-full flex flex-col items-center justify-center">
+    <div>
       <span>Signing Out...</span>
     </div>
   );

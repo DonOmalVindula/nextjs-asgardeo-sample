@@ -20,10 +20,7 @@ export const SignOutButton = () => {
   }
 
   return (
-    <button
-      className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center text-lg h-10 px-4"
-      onClick={handleLogout}
-    >
+    <button onClick={handleLogout}>
       Sign Out
     </button>
   );

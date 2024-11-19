@@ -5,9 +5,7 @@ export default async function Home() {
   const session = await auth();
 
   return (
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16">
-        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-          <div className="flex gap-4 items-center flex-col">
+          <div>
             {
               !session ? (
                 <form
@@ -17,7 +15,7 @@ export default async function Home() {
                   }}
                 >
                   <button
-                    className="rounded-full border border-solid border-transparent flex items-center justify-center bg-foreground text-background text-lg h-10 px-4"
+                    className="bg-foreground text-background text-lg px-4"
                     type="submit"
                   >
                     Sign in
@@ -33,7 +31,5 @@ export default async function Home() {
               )
             }
           </div>
-        </main>
-      </div>
   );
 }
